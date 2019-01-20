@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.company.demo.web.product">
+    <data>
+        <instance id="productDc"
+                  class="com.company.demo.entity.Product"
+                  view="_local">
+            <loader/>
+        </instance>
+    </data>
+
+    <dialogMode height="600"
+                width="800"/>
+
+    <layout expand="editActions"
+            spacing="true"
+            minHeight="AUTO"
+            height="AUTO">
+
+        <form id="form" dataContainer="productDc">
+            <column width="250px">
+                <textField id="titleField" property="title"/>
+                <textArea id="summaryField"
+                          property="summary"
+                          rows="5"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

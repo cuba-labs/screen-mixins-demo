@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd">
+    <data readOnly="true">
+        <collection id="commentsDc"
+                    class="com.company.demo.entity.Comment"
+                    view="comment-view"/>
+    </data>
+
+    <layout>
+        <table id="commentsTable"
+               caption="Comments"
+               height="100%"
+               width="100%"
+               dataContainer="commentsDc">
+            <columns>
+                <column id="user" width="100px"/>
+                <column id="text"/>
+            </columns>
+        </table>
+    </layout>
+</fragment>
