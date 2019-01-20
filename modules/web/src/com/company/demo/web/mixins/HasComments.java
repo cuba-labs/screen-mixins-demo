@@ -38,8 +38,7 @@ public interface HasComments {
         commentsBox.setHeight("200px");
 
         // or even create additional fragments
-        CommentsFragment commentsFragment = fragments
-                .create(screen, CommentsFragment.class);
+        CommentsFragment commentsFragment = fragments.create(screen, CommentsFragment.class);
         commentsFragment.init();
         commentsBox.add(commentsFragment.getFragment());
         commentsBox.expand(commentsFragment.getFragment());
